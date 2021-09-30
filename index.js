@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { Client, Intents } = require("discord.js");
-const ytpl = require("ytpl")
+const ytpl = require("ytpl");
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -115,5 +115,5 @@ client.on("ready", async () => {
 });
 
 client.login(TOKEN); // To Login
-console.log("Logged in Successfully");
+console.log("Logged in Successfully"); // Logged in successfully
 process.on("unhandledRejection", console.error);
