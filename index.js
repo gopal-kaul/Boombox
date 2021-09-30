@@ -11,7 +11,6 @@ const client = new Client({
 });
 const CHANNEL = process.env.CHANNEL;
 const TOKEN = process.env.TOKEN;
-
 const ytdl = require("youtube-dl-exec");
 const {
   joinVoiceChannel,
@@ -115,6 +114,6 @@ client.on("ready", async () => {
   });
 });
 
-client.login(TOKEN); //Login
+client.login(TOKEN); // To Login
 console.log("Logged in Successfully");
 process.on("unhandledRejection", console.error);
