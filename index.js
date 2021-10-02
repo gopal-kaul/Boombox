@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); // Environment Variables 
 const { Client, Intents } = require("discord.js");
 const ytpl = require("ytpl");
 const client = new Client({
