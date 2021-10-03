@@ -8,7 +8,7 @@ const client = new Client({
     Intents.FLAGS.GUILD_VOICE_STATES,
     Intents.FLAGS.GUILDS,
   ],
-});
+}); // Flags Initialized 
 const CHANNEL = process.env.CHANNEL;
 const TOKEN = process.env.TOKEN;
 const ytdl = require("youtube-dl-exec");
@@ -32,7 +32,7 @@ if (!TOKEN) {
   return process.exit(1);
 }
 const player = createAudioPlayer();
-async function playSong(url) {
+async function playSong(url) { // Function to play song
   var process = ytdl.raw(
     url,
     {
@@ -51,9 +51,9 @@ async function playSong(url) {
 
   player.play(resource);
   return entersState(player, AudioPlayerStatus.Playing, 10e3);
-}
+} 
 
-async function connectToChannel(channel) {
+async function connectToChannel(channel) { // Function to connect to channel
   const connection = joinVoiceChannel({
     channelId: channel.id,
     guildId: channel.guild.id,
